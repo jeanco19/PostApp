@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_item_post"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/item_vertical_padding"
+        android:paddingStart="@dimen/item_horizontal_padding"
+        android:paddingEnd="@dimen/item_horizontal_padding"
+        android:paddingBottom="@dimen/item_vertical_padding">
+
+        <ImageView
+            android:id="@+id/iv_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete"
+            app:tint="@color/grey"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="@dimen/match_constraint_width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/item_space_between_elements"
+            android:layout_marginEnd="@dimen/item_space_between_elements"
+            android:textSize="@dimen/item_title_size"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linear_icons"
+            app:layout_constraintEnd_toStartOf="@+id/iv_remove"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="sunt aut facere repellat provident occaecati excepturi optio reprehenderit"/>
+
+        <LinearLayout
+            android:id="@+id/linear_icons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_badge_alert"
+                android:layout_width="@dimen/item_badge_alert_size"
+                android:layout_height="@dimen/item_badge_alert_size"
+                android:src="@drawable/custom_round_badge"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/iv_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_star"
+                android:contentDescription="@string/favorite_icon_content_description"
+                android:visibility="gone"
+                app:tint="@color/yellow"
+                tools:visibility="visible"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

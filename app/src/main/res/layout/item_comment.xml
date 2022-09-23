@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_5dp">
+
+    <TextView
+        android:id="@+id/tv_comment_name"
+        android:layout_width="@dimen/match_constraint_width"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:maxLines="2"
+        android:ellipsize="end"
+        tools:text="id labore ex et quam laborum"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_comment_message"
+        android:layout_width="@dimen/match_constraint_width"
+        android:layout_height="wrap_content"
+        tools:text="laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
+        app:layout_constraintTop_toBottomOf="@id/tv_comment_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

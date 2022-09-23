@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_post_graph"
+    app:startDestination="@id/all_post_fragment">
+
+    <fragment
+        android:id="@+id/all_post_fragment"
+        android:name="com.jean.postapp.presentation.post.all.AllPostFragment"
+        android:label="fragment_all_post"
+        tools:layout="@layout/fragment_all_post"/>
+
+    <fragment
+        android:id="@+id/favorite_post_fragment"
+        android:name="com.jean.postapp.presentation.post.favorite.FavoritePostFragment"
+        android:label="fragment_favorite_post"
+        tools:layout="@layout/fragment_favorite_post"/>
+
+</navigation>

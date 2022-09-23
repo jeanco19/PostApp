@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_post_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/standard_layout_padding"
+    android:paddingStart="@dimen/standard_layout_padding"
+    android:paddingEnd="@dimen/standard_layout_padding"
+    android:orientation="vertical"
+    tools:context=".presentation.post.detail.DetailPostActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_detail_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/error_icon_size"
+            android:layout_height="@dimen/error_icon_size"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_error"
+            app:tint="@color/grey"/>
+
+        <TextView
+            android:id="@+id/tv_error_detail_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/empty_message_post_detail"
+            android:textSize="@dimen/text_error_size"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_retry_detail_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_retry"
+            android:textColor="@color/secondary_dark"
+            app:strokeColor="@color/secondary_dark"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_detail"
+        android:layout_width="@dimen/match_constraint_width"
+        android:layout_height="@dimen/match_constraint_height"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/text_title_size"
+            android:textColor="@color/black"
+            tools:text="sunt aut facere repellat provident occaecati excepturi optio reprehenderit"/>
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            tools:text="quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/subtitle_author_information_with_colon"
+                android:textSize="@dimen/text_subtitle_size"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_error_author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:gravity="center_horizontal"
+                android:text="@string/error_message_author_info"
+                android:textSize="@dimen/text_error_size"
+                android:textColor="@color/black"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/linear_author_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_author_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    tools:text="Leanne Graham"/>
+
+                <TextView
+                    android:id="@+id/tv_author_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5dp"
+                    tools:text="Sincere@april.biz"/>
+
+                <TextView
+                    android:id="@+id/tv_author_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5dp"
+                    tools:text="(775)976-6794 x41206"/>
+
+                <TextView
+                    android:id="@+id/tv_author_website"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5dp"
+                    tools:text="conrad.com"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/subtitle_comments_with_colon"
+                android:textSize="@dimen/text_subtitle_size"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_error_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:gravity="center_horizontal"
+                android:text="@string/error_message_comments"
+                android:textSize="@dimen/text_error_size"
+                android:textColor="@color/black"
+                android:visibility="gone"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_comments"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:visibility="gone"
+                tools:listitem="@layout/item_comment"
+                tools:visibility="visible"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar_post_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

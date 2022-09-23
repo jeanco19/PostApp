@@ -1,0 +1,39 @@
+<resources>
+    <!-- COMMON UI -->
+    <string name="app_name">PostApp</string>
+
+    <string name="title_posts">Publicaciones</string>
+    <string name="title_favorites">Favoritas</string>
+    <string name="title_retry">Reintentar</string>
+    <string name="title_delete">Eliminar</string>
+    <string name="title_cancel">Cancelar</string>
+    <string name="title_remove">Retirar</string>
+
+    <!-- ALL POST UI -->
+    <string name="favorite_icon_content_description">Favorite Icon</string>
+    <string name="empty_message_all_post">No se han encontrado publicaciones</string>
+    <string name="error_all_post_service">Ha ocurrido un error inesperado al intentar recuperar nuevas publicaciones.</string>
+    <string name="delete_post_dialog_title">Eliminar publicación</string>
+    <string name="delete_post_dialog_message">¿Estás seguro que quieres eliminar esta publicación?</string>
+    <string name="delete_all_post_dialog_title">Eliminar publicaciones</string>
+    <string name="delete_all_post_dialog_message">¿Estás seguro que quieres eliminar todas las publicaciones?</string>
+    <string name="deleted_post_message">Se ha eliminado la publicación</string>
+    <string name="deleted_all_post_message">Se han eliminado todas las publicaciones</string>
+    <string name="removed_favorite_post_message">Se ha retirado la publicación de tus favoritas</string>
+    <string name="title_post_size">Publicaciones (%s)</string>
+    <string name="title_delete_all">ELIMINAR TODAS</string>
+
+    <!-- FAVORITES POST UI -->
+    <string name="error_message_favorites">No tienes publicaciones favoritas</string>
+    <string name="remove_favorite_post_dialog_title">Retirar publicación</string>
+    <string name="remove_favorite_post_dialog_message">¿Estás seguro que quieres retirar esta publicación de favoritas?</string>
+
+    <!-- DETAIL POST UI -->
+    <string name="subtitle_author_information_with_colon">Información del autor:</string>
+    <string name="subtitle_comments_with_colon">Comentarios:</string>
+    <string name="empty_message_post_detail">Ha ocurrido un error al recuperar la información de la publicación</string>
+    <string name="error_message_comments">No se encontraron comentarios para esta publicación</string>
+    <string name="error_message_author_info">No se encontró información del autor</string>
+    <string name="add_post_to_favorite">Se agregó publicación a favoritas</string>
+    <string name="remove_post_from_favorite">Se retiro publicación de favoritas</string>
+</resources>
